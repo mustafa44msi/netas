@@ -1,17 +1,37 @@
 // Sayfa yüklendiğinde çalışacak kodlar
 document.addEventListener('DOMContentLoaded', function() {
-    // Dropdown menü için tıklama olayı
+    // Menü toggle işlevi
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');
-    
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Dropdown menüler için mobil tıklama işlevi
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('a');
-        const menu = dropdown.querySelector('.dropdown-menu');
-        
-        // Mobil cihazlar için tıklama ile açılma
-        if (window.innerWidth <= 768) {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
+    // Sayfa dışına tıklandığında menüyü kapat
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar') && navLinks) {
+            navLinks.classList.remove('active');
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
             });
         }
     });
@@ -44,52 +64,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScroll = 0;
     const header = document.querySelector('header');
     
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            header.classList.remove('scroll-up');
-            return;
-        }
-        
-        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-            // Aşağı scroll
-            header.classList.remove('scroll-up');
-            header.classList.add('scroll-down');
-        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-            // Yukarı scroll
-            header.classList.remove('scroll-down');
-            header.classList.add('scroll-up');
-        }
-        lastScroll = currentScroll;
-    });
-
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    // Menü toggle işlevi
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
-
-    // Dropdown menüler için mobil tıklama işlevi
-    dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
             }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            lastScroll = currentScroll;
         });
-    });
-
-    // Sayfa dışına tıklandığında menüyü kapat
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.navbar')) {
-            navLinks.classList.remove('active');
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
-        }
-    });
+    }
 }); 
