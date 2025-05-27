@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netaş Benzeri Web Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Bölümü -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://via.placeholder.com/150x50" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#urunler">Ürünler <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Yerli Bulut Sunucu</a></li>
+                        <li><a href="#">Siber Güvenlik</a></li>
+                        <li><a href="#">Ağ Çözümleri</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#cozumler">Çözümler & Hizmetler <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Kurumsal Çözümler</a></li>
+                        <li><a href="#">Teknik Hizmetler</a></li>
+                        <li><a href="#">Danışmanlık</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#blog">Blog <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Haberler</a></li>
+                        <li><a href="#">Makaleler</a></li>
+                        <li><a href="#">Etkinlikler</a></li>
+                    </ul>
+                </li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <div class="language-selector">
+                <select>
+                    <option value="tr">TR</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dijital Dönüşümde Yanınızdayız</h1>
+            <p>Yenilikçi teknolojiler ve çözümlerle işinizi ileriye taşıyoruz</p>
+            <button class="cta-button">Daha Fazla Bilgi</button>
+        </div>
+    </section>
+
+    <!-- Ürünler Bölümü -->
+    <section id="urunler" class="products">
+        <h2>Ürünlerimiz</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <i class="fas fa-server"></i>
+                <h3>Yerli Bulut Sunucu</h3>
+                <p>Yüksek performanslı yerli bulut çözümleri</p>
+            </div>
+            <div class="product-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Siber Güvenlik</h3>
+                <p>Kapsamlı güvenlik çözümleri</p>
+            </div>
+            <div class="product-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Ağ Çözümleri</h3>
+                <p>Modern ağ altyapısı çözümleri</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Çözümler Bölümü -->
+    <section id="cozumler" class="solutions">
+        <h2>Çözümler & Hizmetler</h2>
+        <div class="solutions-grid">
+            <div class="solution-card">
+                <h3>Kurumsal Çözümler</h3>
+                <ul>
+                    <li>Veri Merkezi Çözümleri</li>
+                    <li>Bulut Hizmetleri</li>
+                    <li>Yönetilen Hizmetler</li>
+                </ul>
+            </div>
+            <div class="solution-card">
+                <h3>Teknik Hizmetler</h3>
+                <ul>
+                    <li>Teknik Destek</li>
+                    <li>Bakım Hizmetleri</li>
+                    <li>Danışmanlık</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Bölümü -->
+    <section id="blog" class="blog">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://via.placeholder.com/300x200" alt="Blog Görseli">
+                <h3>Dijital Dönüşüm Trendleri</h3>
+                <p>2024 yılında öne çıkan dijital dönüşüm trendleri...</p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </article>
+            <article class="blog-card">
+                <img src="https://via.placeholder.com/300x200" alt="Blog Görseli">
+                <h3>Siber Güvenlik İpuçları</h3>
+                <p>İşletmenizi korumak için önemli güvenlik önlemleri...</p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section id="iletisim" class="contact">
+        <h2>İletişim</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Bize Ulaşın</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Adres: İstanbul, Türkiye</p>
+                <p><i class="fas fa-phone"></i> Telefon: +90 (216) XXX XX XX</p>
+                <p><i class="fas fa-envelope"></i> E-posta: info@example.com</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Adınız" required>
+                <input type="email" placeholder="E-posta Adresiniz" required>
+                <textarea placeholder="Mesajınız" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Bölümü -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hakkımızda</h4>
+                <ul>
+                    <li><a href="#">Şirket Profili</a></li>
+                    <li><a href="#">Kariyer</a></li>
+                    <li><a href="#">İnsan Kaynakları</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ürünler</h4>
+                <ul>
+                    <li><a href="#">Bulut Çözümleri</a></li>
+                    <li><a href="#">Güvenlik</a></li>
+                    <li><a href="#">Ağ Çözümleri</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Sosyal Medya</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
