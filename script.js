@@ -63,4 +63,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         lastScroll = currentScroll;
     });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Menü toggle işlevi
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+
+    // Dropdown menüler için mobil tıklama işlevi
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            }
+        });
+    });
+
+    // Sayfa dışına tıklandığında menüyü kapat
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar')) {
+            navLinks.classList.remove('active');
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
 }); 

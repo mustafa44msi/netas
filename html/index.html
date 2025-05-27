@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netaş Benzeri Web Sitesi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -13,6 +13,9 @@
         <nav class="navbar">
             <div class="logo">
                 <img src="https://via.placeholder.com/150x50" alt="Logo">
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
                 <li class="dropdown">
@@ -23,16 +26,8 @@
                         <li><a href="#">Ağ Çözümleri</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#cozumler">Çözümler & Hizmetler <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Kurumsal Çözümler</a></li>
-                        <li><a href="#">Teknik Hizmetler</a></li>
-                        <li><a href="#">Danışmanlık</a></li>
-                    </ul>
-                </li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="contact.html">İletişim</a></li>
             </ul>
         </nav>
     </header>
@@ -107,25 +102,6 @@
                 <p>İşletmenizi korumak için önemli güvenlik önlemleri...</p>
                 <a href="#" class="read-more">Devamını Oku</a>
             </article>
-        </div>
-    </section>
-
-    <!-- İletişim Bölümü -->
-    <section id="iletisim" class="contact">
-        <h2>İletişim</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Bize Ulaşın</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Adres: İstanbul, Türkiye</p>
-                <p><i class="fas fa-phone"></i> Telefon: +90 (216) XXX XX XX</p>
-                <p><i class="fas fa-envelope"></i> E-posta: info@example.com</p>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Adınız" required>
-                <input type="email" placeholder="E-posta Adresiniz" required>
-                <textarea placeholder="Mesajınız" required></textarea>
-                <button type="submit">Gönder</button>
-            </form>
         </div>
     </section>
 
