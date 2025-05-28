@@ -1,0 +1,151 @@
+/* Çözümler Hero Bölümü */
+.solutions-hero {
+    background: linear-gradient(rgba(2, 161, 173, 0.9), rgba(2, 161, 173, 0.9)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.solutions-hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.solutions-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Çözüm Kategorileri */
+.solution-category {
+    padding: 5rem 5%;
+}
+
+.solution-category:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.solution-category h2 {
+    color: #02a1ad;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Çözüm Grid */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Çözüm Kartları */
+.solution-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    padding: 2rem;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+}
+
+.solution-icon {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.solution-icon i {
+    font-size: 3rem;
+    color: #02a1ad;
+}
+
+.solution-info h3 {
+    color: #02a1ad;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.solution-info p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Çözüm Özellikleri */
+.solution-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.solution-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.solution-features i {
+    color: #02a1ad;
+}
+
+/* Çözüm Butonu */
+.solution-button {
+    display: inline-block;
+    background-color: #02a1ad;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.solution-button:hover {
+    background-color: #018a94;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .solutions-hero h1 {
+        font-size: 2rem;
+    }
+
+    .solution-category {
+        padding: 3rem 5%;
+    }
+
+    .solution-category h2 {
+        font-size: 1.5rem;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-card {
+        padding: 1.5rem;
+    }
+
+    .solution-icon i {
+        font-size: 2.5rem;
+    }
+} 

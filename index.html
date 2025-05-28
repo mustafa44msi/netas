@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netaş Benzeri Web Sitesi</title>
+    <title>NETAŞ - Dijital Dönüşümde Yanınızdayız</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,18 +12,24 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="https://via.placeholder.com/150x50" alt="Logo">
+                <a href="index.html"><img src="netas.png" alt="Netaş Logo"></a>
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
                 <li class="dropdown">
-                    <a href="#urunler">Ürünler <i class="fas fa-chevron-down"></i></a>
+                    <a href="products.html">Ürünler <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Yerli Bulut Sunucu</a></li>
-                        <li><a href="#">Siber Güvenlik</a></li>
-                        <li><a href="#">Ağ Çözümleri</a></li>
+                        <li><a href="products.html#bulut">Yerli Bulut Sunucu</a></li>
+                        <li><a href="products.html#iot">Nesnelerin İnterneti</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="solutions.html">Çözümler ve Hizmetler <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solutions.html#kurumsal">Kurumsal Çözümler</a></li>
+                        <li><a href="solutions.html#teknik">Teknik Hizmetler</a></li>
                     </ul>
                 </li>
                 <li><a href="blog.html">Blog</a></li>
@@ -41,24 +47,76 @@
         </div>
     </section>
 
+<!-- Blog Bölümü -->
+<section id="blog" class="blog">
+    <h2>Blog</h2>
+    <div class="blog-grid">
+        <article class="blog-card">
+            <img src="blog4.jpg" alt="Blog Görseli">
+            <h3>Dijital Dönüşüm Trendleri</h3>
+            <p>2024 yılında öne çıkan dijital dönüşüm trendleri...</p>
+            <a href="#" class="read-more">Devamını Oku</a>
+        </article>
+        <article class="blog-card">
+            <img src="blog5.jpg" alt="Blog Görseli">
+            <h3>Siber Güvenlik İpuçları</h3>
+            <p>İşletmenizi korumak için önemli güvenlik önlemleri...</p>
+            <a href="#" class="read-more">Devamını Oku</a>
+        </article>
+    </div>
+</section>
+
     <!-- Ürünler Bölümü -->
     <section id="urunler" class="products">
         <h2>Ürünlerimiz</h2>
         <div class="product-grid">
-            <div class="product-card">
-                <i class="fas fa-server"></i>
-                <h3>Yerli Bulut Sunucu</h3>
-                <p>Yüksek performanslı yerli bulut çözümleri</p>
-            </div>
-            <div class="product-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Siber Güvenlik</h3>
-                <p>Kapsamlı güvenlik çözümleri</p>
-            </div>
-            <div class="product-card">
-                <i class="fas fa-network-wired"></i>
-                <h3>Ağ Çözümleri</h3>
-                <p>Modern ağ altyapısı çözümleri</p>
+            <a href="products.html">
+                <div class="product-card">
+                    <i class="fas fa-server"></i>
+                    <h3 style="text-decoration: none; color: black;">Yerli Bulut Sunucu</h3>
+                    <p style="text-decoration: none; color: black;">Yüksek performanslı yerli bulut çözümleri</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="product-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 style="text-decoration: none; color: black;">Siber Güvenlik</h3>
+                    <p style="text-decoration: none; color: black;">Kapsamlı güvenlik çözümleri</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="product-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3 style="text-decoration: none; color: black;">Ağ Çözümleri</h3>
+                    <p style="text-decoration: none; color: black;">Modern ağ altyapısı çözümleri</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- IoT Bölümü -->
+    <section id="iot" class="solutions">
+        <div class="container">
+            <h2>Nesnelerin İnterneti (IoT)</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>ION IoT Platform</h3>
+                    <p>Akıllı cihazlarınızı tek platformdan yönetin.</p>
+                    <ul>
+                        <li>Gerçek Zamanlı İzleme</li>
+                        <li>Uzaktan Kontrol</li>
+                        <li>Veri Analizi</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <h3>Akıllı Etkinlik Yönetimi</h3>
+                    <p>Etkinliklerinizi dijital olarak yönetin ve optimize edin.</p>
+                    <ul>
+                        <li>Bilet Satışı</li>
+                        <li>Katılımcı Yönetimi</li>
+                        <li>Raporlama</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -86,55 +144,29 @@
         </div>
     </section>
 
-    <!-- Blog Bölümü -->
-    <section id="blog" class="blog">
-        <h2>Blog</h2>
-        <div class="blog-grid">
-            <article class="blog-card">
-                <img src="https://via.placeholder.com/300x200" alt="Blog Görseli">
-                <h3>Dijital Dönüşüm Trendleri</h3>
-                <p>2024 yılında öne çıkan dijital dönüşüm trendleri...</p>
-                <a href="#" class="read-more">Devamını Oku</a>
-            </article>
-            <article class="blog-card">
-                <img src="https://via.placeholder.com/300x200" alt="Blog Görseli">
-                <h3>Siber Güvenlik İpuçları</h3>
-                <p>İşletmenizi korumak için önemli güvenlik önlemleri...</p>
-                <a href="#" class="read-more">Devamını Oku</a>
-            </article>
-        </div>
-    </section>
-
     <!-- Footer Bölümü -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Hakkımızda</h4>
-                <ul>
-                    <li><a href="#">Şirket Profili</a></li>
-                    <li><a href="#">Kariyer</a></li>
-                    <li><a href="#">İnsan Kaynakları</a></li>
-                </ul>
+                <h4>Netaş Genel Müdürlük</h4>
+                <p>Yenişehir Mahallesi Osmanlı Bulvarı Aeropark Sitesi B Blok No:11B İç Kapı No:40 PENDİK/İSTANBUL</p>
             </div>
             <div class="footer-section">
-                <h4>Ürünler</h4>
-                <ul>
-                    <li><a href="#">Bulut Çözümleri</a></li>
-                    <li><a href="#">Güvenlik</a></li>
-                    <li><a href="#">Ağ Çözümleri</a></li>
-                </ul>
+                <h4>İletişim</h4>
+                <p>info@netas.com.tr<br>+90(216) 522 20 00</p>
             </div>
             <div class="footer-section">
                 <h4>Sosyal Medya</h4>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Tüm hakları saklıdır.</p>
+            <p>&copy; 2024 Netaş Telekomünikasyon A.Ş. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 

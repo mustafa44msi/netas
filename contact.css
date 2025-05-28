@@ -1,6 +1,6 @@
 /* İletişim Hero Bölümü */
 .contact-hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080');
+    background: linear-gradient(rgba(2, 161, 173, 0.9), rgba(2, 161, 173, 0.9)), url('https://via.placeholder.com/1920x1080');
     background-size: cover;
     background-position: center;
     height: 40vh;
@@ -50,7 +50,7 @@
 }
 
 .contact-card h3 {
-    color: #0066cc;
+    color: #02a1ad;
     margin-bottom: 1rem;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .contact-card i {
-    color: #0066cc;
+    color: #02a1ad;
     width: 20px;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .submit-button {
-    background-color: #0066cc;
+    background-color: #02a1ad;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -122,7 +122,7 @@
 }
 
 .submit-button:hover {
-    background-color: #0052a3;
+    background-color: #018a94;
 }
 
 /* Harita Bölümü */

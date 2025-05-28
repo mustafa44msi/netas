@@ -1,26 +1,26 @@
-// Sayfa yüklendiğinde çalışacak kodlar
+// Mobil menü işlemleri
 document.addEventListener('DOMContentLoaded', function() {
-    // Menü toggle işlevi
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');
 
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
+        menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
     }
 
-    // Dropdown menüler için mobil tıklama işlevi
+    // Dropdown menüler için tıklama olayı
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('a');
-        if (link) {
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        if (link && menu) {
             link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
-                    e.stopPropagation();
-                    dropdown.classList.toggle('active');
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
                 }
             });
         }
@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sayfa dışına tıklandığında menüyü kapat
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.navbar') && navLinks) {
-            navLinks.classList.remove('active');
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
+        if (navLinks && navLinks.classList.contains('active')) {
+            if (!e.target.closest('.navbar')) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
         }
     });
 
@@ -43,8 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                    behavior: 'smooth'
                 });
             }
         });
@@ -55,8 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Mesajınız gönderildi! (Demo amaçlı)');
-            this.reset();
+            alert('Form gönderildi! (Demo)');
         });
     }
 
